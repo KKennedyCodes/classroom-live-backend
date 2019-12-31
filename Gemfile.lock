@@ -189,6 +189,9 @@ GEM
     rb-inotify (0.10.0)
       ffi (~> 1.0)
     regexp_parser (1.6.0)
+    responders (3.0.0)
+      actionpack (>= 5.0)
+      railties (>= 5.0)
     ruby-debug-ide (0.7.0)
       rake (>= 0.8.1)
     ruby-progressbar (1.10.1)
@@ -273,6 +276,7 @@ DEPENDENCIES
   pry-rails
   puma (~> 3.11)
   rails (~> 5.2.3)
+  responders
   ruby-debug-ide (>= 0.7.0)
   sass-rails (~> 5.0)
   selenium-webdriver

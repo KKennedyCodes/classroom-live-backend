@@ -1,8 +1,8 @@
 class CoursesController < ApplicationController
-  before_action :require_movie, only: [:show]
+  # before_action :require_movie, only: [:show]
   
   def index
-    data = Movie.all
+    data = Course.all
     render status: :ok, json: data
   end
   
@@ -27,6 +27,10 @@ class CoursesController < ApplicationController
   end
   
   private
+  
+  def course_params
+    params.require(:course).permit(:title, :section, :code, :user_id)
+  end
   
   def require_movie
     @course = Course.find_by(title: params[:title])
