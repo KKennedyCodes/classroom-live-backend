@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   
-  resources :students, only: [:index, :show, :create]
-  resources :teachers, only: [:show, :create]
+  # resources :students, only: [:index, :show, :create]
+  # resources :teachers , only: [:show, :create]
+  resources :students
+  resources :teachers
   resources :courses
   resources :sessions
   resources :questions
@@ -12,5 +14,5 @@ Rails.application.routes.draw do
   # post "/rentals/:title/check-out", to: "rentals#check_out", as: "check_out"
   # get "/rentals/overdue", to: "rentals#overdue", as: "overdue"
   
-  root 'teachers#show'
+  # root 'teachers#show'
 end
