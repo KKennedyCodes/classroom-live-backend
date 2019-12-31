@@ -10,19 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_30_193237) do
+ActiveRecord::Schema.define(version: 2019_12_31_184205) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "answers", force: :cascade do |t|
-    t.string "response"
+    t.string "answer_text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
     t.bigint "question_id"
     t.index ["question_id"], name: "index_answers_on_question_id"
     t.index ["user_id"], name: "index_answers_on_user_id"
+  end
+
+  create_table "codes", force: :cascade do |t|
+    t.string "color"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "courses", force: :cascade do |t|
@@ -36,20 +43,22 @@ ActiveRecord::Schema.define(version: 2019_12_30_193237) do
   end
 
   create_table "questions", force: :cascade do |t|
-    t.string "question"
-    t.boolean "public"
+    t.string "question_text"
+    t.boolean "visible"
     t.boolean "answered"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
+    t.bigint "session_id"
+    t.index ["session_id"], name: "index_questions_on_session_id"
     t.index ["user_id"], name: "index_questions_on_user_id"
   end
 
   create_table "sessions", force: :cascade do |t|
     t.string "task"
     t.string "task_objective"
-    t.datetime "start"
-    t.datetime "end"
+    t.datetime "session_start"
+    t.datetime "session_end"
     t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -57,22 +66,17 @@ ActiveRecord::Schema.define(version: 2019_12_30_193237) do
     t.index ["course_id"], name: "index_sessions_on_course_id"
   end
 
-  create_table "status_codes", force: :cascade do |t|
-    t.string "color"
-    t.string "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "statuses", force: :cascade do |t|
-    t.datetime "start"
-    t.datetime "end"
+    t.datetime "status_start"
+    t.datetime "status_end"
     t.string "student_comment"
     t.string "teacher_comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
     t.bigint "session_id"
+    t.bigint "code_id"
+    t.index ["code_id"], name: "index_statuses_on_code_id"
     t.index ["session_id"], name: "index_statuses_on_session_id"
     t.index ["user_id"], name: "index_statuses_on_user_id"
   end
@@ -89,8 +93,10 @@ ActiveRecord::Schema.define(version: 2019_12_30_193237) do
   add_foreign_key "answers", "questions"
   add_foreign_key "answers", "users"
   add_foreign_key "courses", "users"
+  add_foreign_key "questions", "sessions"
   add_foreign_key "questions", "users"
   add_foreign_key "sessions", "courses"
+  add_foreign_key "statuses", "codes"
   add_foreign_key "statuses", "sessions"
   add_foreign_key "statuses", "users"
 end
