@@ -1,5 +1,5 @@
 class CoursesController < ApplicationController
-  # before_action :require_movie, only: [:show]
+  before_action :require_course, only: [:show]
   
   def index
     data = Course.all
@@ -32,10 +32,10 @@ class CoursesController < ApplicationController
     params.require(:course).permit(:title, :section, :code, :user_id)
   end
   
-  def require_movie
-    @course = Course.find_by(title: params[:title])
-    unless @movie
-      render status: :not_found, json: { errors: { title: ["No course with title #{params["title"]}"] } }
+  def require_course
+    @course = Course.find_by(id: params[:id])
+    unless @course
+      render status: :not_found, json: { errors: { id: ["No course with title #{params["id"]}"] } }
     end
   end
 end

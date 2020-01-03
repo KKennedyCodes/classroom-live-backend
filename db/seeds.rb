@@ -50,7 +50,7 @@ CSV.foreach(COURSES_FILE, :headers => true) do |row|
   course.title = row["title"]
   course.section = row["section"]
   course.code = row["code"]
-  course.user_id = created_users.sample
+  course.user_id = User.first.id
   
   successful = course.save
   created_courses << course
@@ -103,8 +103,8 @@ CSV.foreach(QUESTIONS_FILE, :headers => true) do |row|
   question.question_text = row["question_text"]
   question.visible = row["visible"]
   question.answered = row["answered"]
-  question.user_id = created_users.sample
-  question.session_id = created_sessions.sample
+  question.user_id = (created_users.sample).id
+  question.session_id = (created_sessions.sample).id
   
   successful = question.save
   created_questions << question
@@ -128,8 +128,8 @@ answer_failures = []
 CSV.foreach(ANSWERS_FILE, :headers => true) do |row|
   answer = Answer.new
   answer.answer_text = row["answer_text"]
-  answer.user_id = created_users.sample
-  answer.question_id = created_questions.sample
+  answer.user_id = (created_users.sample).id
+  answer.question_id = (created_questions.sample).id
   
   successful = answer.save
   created_answers << answer
@@ -182,9 +182,9 @@ CSV.foreach(STATUSES_FILE, :headers => true) do |row|
   status.status_end = row["status_end"]
   status.student_comment = row["student_comment"]
   status.teacher_comment = row["teacher_comment"]
-  status.session_id = created_sessions.sample
-  status.user_id = created_users.sample
-  status.code_id = created_codes.sample
+  status.session_id = (created_sessions.sample).id
+  status.user_id = (created_users.sample).id
+  status.code_id = (created_codes.sample).id
   successful = status.save
   
   if !successful

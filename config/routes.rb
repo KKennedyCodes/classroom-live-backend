@@ -3,13 +3,14 @@ Rails.application.routes.draw do
   
   # resources :students, only: [:index, :show, :create]
   # resources :teachers , only: [:show, :create]
-  resources :students
-  resources :teachers
+  
+  resources :users
   resources :courses
   resources :sessions
   resources :questions
   resources :answers
   resources :statuses
+  resources :codes
   
   # post "/rentals/:title/check-out", to: "rentals#check_out", as: "check_out"
   # get "/rentals/overdue", to: "rentals#overdue", as: "overdue"

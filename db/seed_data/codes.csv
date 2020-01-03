@@ -1,6 +1,6 @@
-color, description
-white, No Status Submitted
-red, Need Help - Can't Move On
-yellow, Need Help - Still Working
-green, Good - Working Fine
-blue, Task Complete 
+color,description
+white,Not-Submitted
+red,Help-Stuck
+yellow,Help-Working
+green,Good-Working
+blue,Task-Complete 
