@@ -50,7 +50,7 @@ CSV.foreach(COURSES_FILE, :headers => true) do |row|
   course.title = row["title"]
   course.section = row["section"]
   course.code = row["code"]
-  course.user_id = User.first.id
+  course.user_id = rand(1..2)
   
   successful = course.save
   created_courses << course

@@ -11,8 +11,9 @@ Rails.application.routes.draw do
   resources :answers
   resources :statuses
   resources :codes
+  resources :startlive
+  # show "/sessions/:id/live", to: "sessions#live", as: "live"
   
-  # post "/rentals/:title/check-out", to: "rentals#check_out", as: "check_out"
   # get "/rentals/overdue", to: "rentals#overdue", as: "overdue"
   
   # root 'teachers#show'
