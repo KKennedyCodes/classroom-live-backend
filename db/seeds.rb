@@ -7,6 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'csv'
 created_users = []
+created_students = []
+created_teachers = []
 created_courses = []
 created_sessions = []
 created_questions = []
@@ -24,14 +26,19 @@ CSV.foreach(USERS_FILE, :headers => true) do |row|
   user.last_name = row["last_name"]
   user.pronouns = row["pronouns"]
   user.email = row["email"]
-  
+  user.teacher = row["teacher"]
   successful = user.save
-  created_users << user
   
   if !successful
     user_failures << user
     puts "Failed to save user: #{user.inspect}"
   else
+    created_users << user
+    if user.teacher == true
+      created_teachers << user
+    else
+      created_students << user
+    end
     # puts "Created merchant: #{merchant.inspect}"
   end
 end
@@ -50,7 +57,7 @@ CSV.foreach(COURSES_FILE, :headers => true) do |row|
   course.title = row["title"]
   course.section = row["section"]
   course.code = row["code"]
-  course.user_id = rand(1..2)
+  course.user_id = (created_teachers.sample).id
   
   successful = course.save
   created_courses << course
@@ -76,7 +83,7 @@ CSV.foreach(SESSIONS_FILE, :headers => true) do |row|
   session.task_objective = row["task_objective"]
   session.session_start = row["session_start"]
   session.session_end = row["session_end"]
-  session.status = row["status"]
+  session.live = row["live"]
   session.course_id = row["course_id"]
   successful = session.save
   created_sessions << session
@@ -103,7 +110,7 @@ CSV.foreach(QUESTIONS_FILE, :headers => true) do |row|
   question.question_text = row["question_text"]
   question.visible = row["visible"]
   question.answered = row["answered"]
-  question.user_id = (created_users.sample).id
+  question.user_id = (created_students.sample).id
   question.session_id = (created_sessions.sample).id
   
   successful = question.save
@@ -155,7 +162,7 @@ CSV.foreach(CODES_FILE, :headers => true) do |row|
   code = Code.new
   code.color = row["color"]
   code.description = row["description"]
-  
+  code.variant = row["variant"]
   successful = code.save
   created_codes << code
   
@@ -166,7 +173,7 @@ CSV.foreach(CODES_FILE, :headers => true) do |row|
     # puts "Created merchant: #{merchant.inspect}"
   end
 end
-
+puts "Created Code Example #{code_failures.first}"
 puts "Added #{Code.count} status code records"
 puts "#{code_failures.length} status codes failed to save"
 
@@ -183,7 +190,7 @@ CSV.foreach(STATUSES_FILE, :headers => true) do |row|
   status.student_comment = row["student_comment"]
   status.teacher_comment = row["teacher_comment"]
   status.session_id = (created_sessions.sample).id
-  status.user_id = (created_users.sample).id
+  status.user_id = (created_students.sample).id
   status.code_id = (created_codes.sample).id
   successful = status.save
   
@@ -195,5 +202,5 @@ CSV.foreach(STATUSES_FILE, :headers => true) do |row|
   end
 end
 
-puts "Added #{Session.count} status records"
+puts "Added #{Status.count} status records"
 puts "#{status_failures.length} status failed to save"

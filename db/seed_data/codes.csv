@@ -1,6 +1,6 @@
-color,description
-white,Not-Submitted
-red,Help-Stuck
-yellow,Help-Working
-green,Good-Working
-blue,Task-Complete 
+color,description,variant
+white,Not-Submitted,light
+red,Help-Stuck,danger
+yellow,Help-Working,warning
+green,Good-Working,success
+blue,Task-Complete,primary

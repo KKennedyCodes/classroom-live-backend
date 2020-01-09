@@ -1,3 +1,3 @@
 class Code < ApplicationRecord
-  belongs_to :status
+  # belongs_to :status
 end

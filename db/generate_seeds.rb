@@ -8,13 +8,14 @@ require "csv"
 # $ rails db:reset
 
 # Users (50)
-CSV.open("db/seed_data/users.csv", "w", :write_headers => true, :headers => ["first_name", "last_name", "pronouns", "email" ]) do |csv|
+CSV.open("db/seed_data/users.csv", "w", :write_headers => true, :headers => ["first_name", "last_name", "pronouns", "email", "teacher" ]) do |csv|
   50.times do
     first_name = Faker::Name.first_name
     last_name = Faker::Name.last_name
     pronouns = ["she/hers", "he/his", "they/theirs"].sample
     email = Faker::Internet.email
-    csv << [first_name, last_name, pronouns, email] 
+    teacher= [true, false, false, false, false].sample
+    csv << [first_name, last_name, pronouns, email, teacher] 
   end
 end
 
@@ -24,21 +25,21 @@ CSV.open("db/seed_data/courses.csv", "w", :write_headers => true, :headers => ["
     title = Faker::Educator.unique.course_name
     section = ["Period 1", "Period 2", "Period 3", "Period 4", "Period 5"].sample
     code = Faker::Alphanumeric.unique.alphanumeric(number: 8)
-    user_id = rand(1..50)
+    user_id = nil
     csv << [title, section, code, user_id]
   end
 end
 
 # Sessions (50)
-CSV.open("db/seed_data/sessions.csv", "w", :write_headers => true, :headers => ["task", "task_objective", "start", "end", "status", "course_id"]) do |csv|
+CSV.open("db/seed_data/sessions.csv", "w", :write_headers => true, :headers => ["task", "task_objective", "start", "end", "live", "course_id"]) do |csv|
   50.times do 
     task = Faker::DcComics.title
     task_objective = Faker::GreekPhilosophers.quote
     session_start = rand(Date.today - 500..Date.today)
     session_end = (session_start + 1)
-    status = "complete"
+    live = false
     course_id = rand(1..10)
-    csv << [task, task_objective, session_start, session_end, status, course_id]
+    csv << [task, task_objective, session_start, session_end, live, course_id]
   end
 end
 

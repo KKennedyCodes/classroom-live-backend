@@ -1,51 +1,51 @@
-task,task_objective,start,end,status,course_id
-Green Arrow: The Longbow Hunters,Rhetoric is the art of ruling the minds of men.,2019-08-21,2019-08-22,complete,9
-The Killing Joke,It is impossible to begin to learn that which one thinks one already knows.,2019-08-17,2019-08-18,complete,4
-The New Frontier,Pleasure in the job puts perfection in the work.,2019-11-28,2019-11-29,complete,6
-Swamp Thing: The Anatomy Lesson,A few vices are sufficient to darken many virtues.,2019-12-21,2019-12-22,complete,7
-JLA: Earth 2,The unexamined life is not worth living.,2019-08-13,2019-08-14,complete,2
-Snowbirds Don't Fly,There was never a genius without a tincture of madness.,2018-10-23,2018-10-24,complete,8
-The Coyote Gospel,Good habits formed at youth make all the difference.,2019-02-14,2019-02-15,complete,7
-Crisis On Infinite Earths,Beware the barrenness of a busy life.,2019-11-08,2019-11-09,complete,8
-Green Arrow: The Longbow Hunters,Pleasure in the job puts perfection in the work.,2019-05-01,2019-05-02,complete,8
-All Star Superman,"Dignity does not consist in possessing honors, but in deserving them.",2019-12-26,2019-12-27,complete,6
-Batman: Year One,There was never a genius without a tincture of madness.,2019-04-11,2019-04-12,complete,8
-Jack Kirby's New Gods,There was never a genius without a tincture of madness.,2019-03-15,2019-03-16,complete,4
-Gotham Central,Pleasure in the job puts perfection in the work.,2019-05-18,2019-05-19,complete,5
-The Dark Knight Returns,The unexamined life is not worth living.,2019-09-12,2019-09-13,complete,5
-Swamp Thing: The Anatomy Lesson,Most people would rather give than get affection.,2018-09-24,2018-09-25,complete,3
-Batman: The Long Halloween,There was never a genius without a tincture of madness.,2019-08-28,2019-08-29,complete,10
-The Coyote Gospel,Beware the barrenness of a busy life.,2019-04-19,2019-04-20,complete,7
-JLA: Earth 2,The mind is not a vessel to be filled but a fire to be kindled.,2018-10-11,2018-10-12,complete,7
-Swamp Thing: The Anatomy Lesson,The secret to humor is surprise.,2019-08-10,2019-08-11,complete,10
-Action Comics,"Know how to listen, and you will profit even from those who talk badly.",2019-11-09,2019-11-10,complete,10
-Doom Patrol,A few vices are sufficient to darken many virtues.,2019-04-23,2019-04-24,complete,8
-Whatever Happened To The Man Of Tomorrow?,"Know how to listen, and you will profit even from those who talk badly.",2019-09-21,2019-09-22,complete,3
-All Star Superman,Beware the barrenness of a busy life.,2019-09-07,2019-09-08,complete,7
-Batman: Year One,Good habits formed at youth make all the difference.,2019-09-18,2019-09-19,complete,9
-Kingdom Come,"Quality is not an act, it is a habit.",2019-08-26,2019-08-27,complete,1
-The Killing Joke,"Quality is not an act, it is a habit.",2019-10-23,2019-10-24,complete,5
-Gotham Central,The mind is not a vessel to be filled but a fire to be kindled.,2018-10-18,2018-10-19,complete,6
-Green Arrow: The Longbow Hunters,Philosophy is the highest music.,2019-11-11,2019-11-12,complete,9
-Jack Kirby's New Gods,"Quality is not an act, it is a habit.",2018-12-06,2018-12-07,complete,2
-Gotham Central,A few vices are sufficient to darken many virtues.,2018-10-30,2018-10-31,complete,3
-JLA: Earth 2,There was never a genius without a tincture of madness.,2019-03-13,2019-03-14,complete,4
-JLA: Earth 2,Rhetoric is the art of ruling the minds of men.,2018-10-05,2018-10-06,complete,8
-The Coyote Gospel,Philosophy is the highest music.,2019-05-16,2019-05-17,complete,5
-For The Man Who Has Everything,The unexamined life is not worth living.,2018-10-13,2018-10-14,complete,3
-Batman: The Long Halloween,There was never a genius without a tincture of madness.,2019-11-12,2019-11-13,complete,8
-Crisis On Infinite Earths,The unexamined life is not worth living.,2019-02-12,2019-02-13,complete,7
-Crisis On Infinite Earths,Good habits formed at youth make all the difference.,2019-03-08,2019-03-09,complete,3
-Kingdom Come,Rhetoric is the art of ruling the minds of men.,2019-08-15,2019-08-16,complete,4
-Action Comics,"Know how to listen, and you will profit even from those who talk badly.",2019-05-06,2019-05-07,complete,6
-For The Man Who Has Everything,"It's not what happens to you, but how you react to it that matters.",2018-08-30,2018-08-31,complete,1
-Superman For All Seasons,"Quality is not an act, it is a habit.",2018-11-10,2018-11-11,complete,5
-Kingdom Come,The mind is not a vessel to be filled but a fire to be kindled.,2019-06-04,2019-06-05,complete,3
-Doom Patrol,"The virtue of justice consists in moderation, as regulated by wisdom.",2019-05-25,2019-05-26,complete,4
-Batman: Year One,It is impossible to begin to learn that which one thinks one already knows.,2019-03-26,2019-03-27,complete,1
-JLA: Earth 2,The mind is not a vessel to be filled but a fire to be kindled.,2018-09-11,2018-09-12,complete,10
-The Dark Knight Returns,Most people would rather give than get affection.,2019-01-17,2019-01-18,complete,2
-Teen Titans: The Judas Contract,Love is composed of a single soul inhabiting two bodies.,2019-09-09,2019-09-10,complete,3
-Gotham Central,Control thy passions lest they take vengence on thee.,2019-11-10,2019-11-11,complete,4
-For The Man Who Has Everything,Rhetoric is the art of ruling the minds of men.,2019-01-09,2019-01-10,complete,8
-The Coyote Gospel,The unexamined life is not worth living.,2019-05-15,2019-05-16,complete,6
+task,task_objective,start,end,live,course_id
+The Sinestro Corps War,"It's not what happens to you, but how you react to it that matters.",2019-03-04,2019-03-05,false,1
+The New Frontier,It is impossible to begin to learn that which one thinks one already knows.,2019-05-02,2019-05-03,false,2
+Detective Comics,Love is composed of a single soul inhabiting two bodies.,2019-05-12,2019-05-13,false,6
+For The Man Who Has Everything,A few vices are sufficient to darken many virtues.,2019-04-17,2019-04-18,false,10
+Whatever Happened To The Man Of Tomorrow?,The unexamined life is not worth living.,2019-10-21,2019-10-22,false,1
+The Sinestro Corps War,Only the educated are free.,2019-04-10,2019-04-11,false,2
+Jack Kirby's New Gods,There was never a genius without a tincture of madness.,2018-12-08,2018-12-09,false,2
+Identity Crisis,Only the educated are free.,2019-09-09,2019-09-10,false,3
+The Killing Joke,Good habits formed at youth make all the difference.,2019-11-28,2019-11-29,false,3
+JLA: Earth 2,Good habits formed at youth make all the difference.,2019-12-29,2019-12-30,false,8
+Jack Kirby's New Gods,Beware the barrenness of a busy life.,2019-02-14,2019-02-15,false,7
+Jack Kirby's New Gods,"It's not what happens to you, but how you react to it that matters.",2019-04-28,2019-04-29,false,8
+Superman For All Seasons,A few vices are sufficient to darken many virtues.,2019-10-21,2019-10-22,false,9
+Action Comics,"Dignity does not consist in possessing honors, but in deserving them.",2018-10-14,2018-10-15,false,5
+Detective Comics,"It's not what happens to you, but how you react to it that matters.",2019-04-23,2019-04-24,false,10
+Multiversity,"It's not what happens to you, but how you react to it that matters.",2019-02-09,2019-02-10,false,5
+Action Comics,"The virtue of justice consists in moderation, as regulated by wisdom.",2019-12-20,2019-12-21,false,10
+Grant Morrison's Animal Man,"It's not what happens to you, but how you react to it that matters.",2018-12-27,2018-12-28,false,10
+For The Man Who Has Everything,The mind is not a vessel to be filled but a fire to be kindled.,2019-08-01,2019-08-02,false,2
+JLA: Tower Of Babel,Rhetoric is the art of ruling the minds of men.,2019-01-22,2019-01-23,false,3
+Batman: Year One,Most people would rather give than get affection.,2019-10-16,2019-10-17,false,4
+JLA: Earth 2,Beware the barrenness of a busy life.,2019-07-06,2019-07-07,false,9
+For The Man Who Has Everything,Pleasure in the job puts perfection in the work.,2019-03-27,2019-03-28,false,4
+The Sinestro Corps War,Most people would rather give than get affection.,2019-02-08,2019-02-09,false,10
+The Dark Knight Returns,The unexamined life is not worth living.,2019-06-20,2019-06-21,false,7
+JLA: Tower Of Babel,Most people would rather give than get affection.,2018-10-04,2018-10-05,false,8
+Identity Crisis,"Dignity does not consist in possessing honors, but in deserving them.",2019-11-28,2019-11-29,false,6
+Jack Kirby's New Gods,Pleasure in the job puts perfection in the work.,2019-04-29,2019-04-30,false,9
+Gotham Central,Love is composed of a single soul inhabiting two bodies.,2019-04-04,2019-04-05,false,2
+Batman: Year One,The unexamined life is not worth living.,2019-06-10,2019-06-11,false,4
+Kingdom Come,Rhetoric is the art of ruling the minds of men.,2019-10-08,2019-10-09,false,4
+Batman: The Long Halloween,Only the educated are free.,2019-05-08,2019-05-09,false,9
+Doom Patrol,It is impossible to begin to learn that which one thinks one already knows.,2019-04-03,2019-04-04,false,7
+The Coyote Gospel,Pleasure in the job puts perfection in the work.,2019-11-21,2019-11-22,false,3
+JLA: Earth 2,The secret to humor is surprise.,2019-01-30,2019-01-31,false,1
+Multiversity,"Know how to listen, and you will profit even from those who talk badly.",2018-10-10,2018-10-11,false,6
+Whatever Happened To The Man Of Tomorrow?,Most people would rather give than get affection.,2019-12-29,2019-12-30,false,5
+Multiversity,Good habits formed at youth make all the difference.,2019-05-17,2019-05-18,false,1
+Identity Crisis,The secret to humor is surprise.,2019-04-30,2019-05-01,false,6
+Batman: The Long Halloween,"It's not what happens to you, but how you react to it that matters.",2019-06-11,2019-06-12,false,10
+The Sinestro Corps War,Most people would rather give than get affection.,2019-10-19,2019-10-20,false,8
+Swamp Thing: The Anatomy Lesson,Most people would rather give than get affection.,2019-04-15,2019-04-16,false,6
+Gotham Central,Beware the barrenness of a busy life.,2019-02-18,2019-02-19,false,4
+The Coyote Gospel,Most people would rather give than get affection.,2019-09-13,2019-09-14,false,9
+The New Frontier,"Quality is not an act, it is a habit.",2018-12-15,2018-12-16,false,6
+Superman For All Seasons,A few vices are sufficient to darken many virtues.,2019-01-28,2019-01-29,false,9
+Swamp Thing: The Anatomy Lesson,"Quality is not an act, it is a habit.",2019-06-02,2019-06-03,false,3
+Teen Titans: The Judas Contract,"The virtue of justice consists in moderation, as regulated by wisdom.",2018-11-06,2018-11-07,false,3
+Whatever Happened To The Man Of Tomorrow?,Philosophy is the highest music.,2019-12-20,2019-12-21,false,6
+JLA: Earth 2,The unexamined life is not worth living.,2019-04-15,2019-04-16,false,3
