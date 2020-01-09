@@ -10,17 +10,16 @@ class SessionsController < ApplicationController
     render(
       session: :ok,
       json: @session.as_json(
-        only: [:task, :task_objective, :session_start, :session_end, :status, :course_id],
+        only: [:task, :task_objective, :session_start, :session_end, :live, :course_id],
       )
     )
   end
   
   def create
-    session = Session.new(task: params[:task], task_objective: params[:task_objective], status: params[:status], course_id: params[:course_id])
+    session = Session.new(task: params[:task], task_objective: params[:task_objective], live: params[:live], course_id: params[:course_id])
     
     if session.save
       render session: :ok, json: { success: "success" }
-      redirect_to session
     else
       render session: :bad_request, json: { errors: session.errors.messages }
     end
@@ -30,7 +29,7 @@ class SessionsController < ApplicationController
   private
   
   def session_params
-    params.require(:session).permit(:task, :task_objective, :session_start, :session_end, :status, :course_id)
+    params.require(:session).permit(:task, :task_objective, :session_start, :session_end, :live, :course_id)
   end
   
   def require_session
