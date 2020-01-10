@@ -1,4 +1,5 @@
-faker-2.10.0
+faker-2.10.0 - npm install faker
+
 
 # README
 
