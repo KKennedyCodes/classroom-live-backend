@@ -16,7 +16,7 @@ class StatusesController < ApplicationController
   end
   
   def create
-    course = Status.new(status_start: params[:status_start], status_end: params[:status_end], student_comment: params[:student_comment], teacher_comment: params[:teacher_comment], user_id: params[:user_id], session_id: params[:session_id], code_id: params[:code_id])
+    status = Status.new(status_start: params[:status_start], status_end: params[:status_end], student_comment: params[:student_comment], teacher_comment: params[:teacher_comment], user_id: params[:user_id], session_id: params[:session_id], code_id: params[:code_id])
     
     if status.save
       render status: :ok, json: { success: "success" }
