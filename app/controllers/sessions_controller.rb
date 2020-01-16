@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     
     
     render json: data.as_json(
-      only: [:id, :task, :objective, :date]
+      only: [:id, :task, :task_objective, :created_at, :course_id]
     )
   end
   

@@ -24,8 +24,14 @@ class StatusesController < ApplicationController
       render status: :bad_request, json: { errors: status.errors.messages }
     end
     
+    
   end
   
+  def destroy    
+    @status.destroy
+    # redirect_to root_path
+    return
+  end
   private
   
   def status_params
